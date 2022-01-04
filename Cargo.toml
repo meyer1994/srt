@@ -1,10 +1,11 @@
 [package]
 name = "srt"
 version = "0.1.0"
-authors = ["Joao Meyer <1994meyer@gmail.com>"]
+authors = ["Joao Meyer"]
 edition = "2018"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-clap = "3.0.0-beta.2"
+pest = "2.1.3"
+pest_derive = "2.1.0"

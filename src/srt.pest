@@ -1,0 +1,21 @@
+
+WHITESPACE = _{ " " }
+TIME = _{
+    ASCII_DIGIT{2} ~ ":" ~
+    ASCII_DIGIT{2} ~ ":" ~
+    ASCII_DIGIT{2} ~ "," ~
+    ASCII_DIGIT{3}
+}
+
+id = { ASCII_DIGIT+ }
+start = { TIME }
+end = { TIME }
+text = { (!NEWLINE{2} ~ ANY)+ }
+
+srt = {
+    id ~ NEWLINE ~
+    start ~ "-->" ~ end ~ NEWLINE ~
+    text ~ NEWLINE{2}
+}
+
+subs = { srt* }
